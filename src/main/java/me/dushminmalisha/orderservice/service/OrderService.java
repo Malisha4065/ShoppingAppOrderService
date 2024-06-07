@@ -7,12 +7,14 @@ import me.dushminmalisha.orderservice.model.Order;
 import me.dushminmalisha.orderservice.model.OrderLineItems;
 import me.dushminmalisha.orderservice.repository.OrderRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OrderService {
     private final OrderRepository orderRepository;
 
